@@ -41,3 +41,4 @@ alert:
   initial_pull_off: 1
   download_path: 'images/'
   logo_abuse_rule_id: 'ChangeMe'
+  connector_author_name: 'RecordedFuture'

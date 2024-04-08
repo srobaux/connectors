@@ -64,31 +64,31 @@ class RecordedFutureAlertConnector(threading.Thread):
         )
 
         self.opencti_incident_vocabulary_name = pycti.get_config_variable(
-            "OPENCTI_INCIDENT_VOCABULARY_NAME",
+            "ALERT_INCIDENT_VOCABULARY_NAME",
             ["alert", "incident_vocabulary_name"],
             config,
             required=True,
         )
         self.opencti_channels_vocabulary_name = pycti.get_config_variable(
-            "OPENCTI_CHANNELS_VOCABULARY_NAME",
+            "ALERT_CHANNELS_VOCABULARY_NAME",
             ["alert", "channels_vocabulary_name"],
             config,
             required=True,
         )
         self.opencti_default_marking = pycti.get_config_variable(
-            "OPENCTI_DEFAULT_MARKING",
+            "ALERT_DEFAULT_MARKING",
             ["alert", "default_marking"],
             config,
             required=True,
         )
         self.opencti_connector_author_name = pycti.get_config_variable(
-            "OPENCTI_CONNECTOR_AUTHOR_NAME",
+            "ALERT_CONNECTOR_AUTHOR_NAME",
             ["alert", "connector_author_name"],
             config,
             required=True,
         )
         self.opencti_incident_static_description = pycti.get_config_variable(
-            "OPENCTI_INCIDENT_STATIC_DESCRIPTION",
+            "ALERT_INCIDENT_DEFAULT_DESCRIPTION",
             ["alert", "incident_static_description"],
             config,
             required=True,
@@ -101,10 +101,13 @@ class RecordedFutureAlertConnector(threading.Thread):
             default=1,
         )
         self.connector_download_path = pycti.get_config_variable(
-            "CONNECTOR_DOWNLOAD_PATH", ["alert", "download_path"], config, required=True
+            "ALERT_CONNECTOR_DOWNLOAD_PATH",
+            ["alert", "download_path"],
+            config,
+            required=True
         )
         self.recordedfuture_logo_abuse_rule_id = pycti.get_config_variable(
-            "RECORDED_FUTURE_LOGO_ABUSE_RULE_ID",
+            "ALERT_LOGO_ABUSE_RULE_ID",
             ["alert", "logo_abuse_rule_id"],
             config,
             required=True,

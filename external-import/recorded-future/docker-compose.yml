@@ -27,4 +27,13 @@ services:
       - RECORDED_FUTURE_RISKLIST_RELATED_ENTITIES='Malware,Hash,URL,Threat Actor,MitreAttackIdentifier' #required if RECORDED_FUTURE_PULL_RISK_LIST is True, possible values: Malware,Hash,URL,Threat Actor,MitreAttackIdentifier
       - RECORDED_FUTURE_PULL_THREAT_MAPS=False #optional, can remove
       - RECORDED_FUTURE_THREAT_MAPS_INTERVAL=24 #required, in hours
+      - ALERT_ENABLE=False #required
+      - ALERT_INCIDENT_VOCABULARY_NAME=incident_type_ov #required
+      - ALERT_CHANNELS_VOCABULARY_NAME=channel_types_ov #required
+      - ALERT_DEFAULT_MARKING=TLP:AMBER #required
+      - ALERT_INCIDENT_DEFAULT_DESCRIPTION:'Analyst's comment \n\n'  #required
+      - ALERT_CONNECTOR_AUTHOR_NAME:RecordedFuture #required
+      - ALERT_INITIAL_PULL_OFF:1 #optional, default is 1
+      - ALERT_CONNECTOR_DOWNLOAD_PATH:'/images' #required
+      - ALERT_LOGO_ABUSE_RULE_ID:ChangeMe #required
     restart: always
