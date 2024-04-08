@@ -64,50 +64,50 @@ class RecordedFutureAlertConnector(threading.Thread):
         )
 
         self.opencti_incident_vocabulary_name = pycti.get_config_variable(
-            "ALERT_INCIDENT_VOCABULARY_NAME",
+            "RECORDED_FUTURE_ALERT_INCIDENT_VOCABULARY_NAME",
             ["alert", "incident_vocabulary_name"],
             config,
             required=True,
         )
         self.opencti_channels_vocabulary_name = pycti.get_config_variable(
-            "ALERT_CHANNELS_VOCABULARY_NAME",
+            "RECORDED_FUTURE_ALERT_CHANNELS_VOCABULARY_NAME",
             ["alert", "channels_vocabulary_name"],
             config,
             required=True,
         )
         self.opencti_default_marking = pycti.get_config_variable(
-            "ALERT_DEFAULT_MARKING",
+            "RECORDED_FUTURE_ALERT_DEFAULT_MARKING",
             ["alert", "default_marking"],
             config,
             required=True,
         )
         self.opencti_connector_author_name = pycti.get_config_variable(
-            "ALERT_CONNECTOR_AUTHOR_NAME",
+            "RECORDED_FUTURE_ALERT_CONNECTOR_AUTHOR_NAME",
             ["alert", "connector_author_name"],
             config,
             required=True,
         )
         self.opencti_incident_static_description = pycti.get_config_variable(
-            "ALERT_INCIDENT_DEFAULT_DESCRIPTION",
+            "RECORDED_FUTURE_ALERT_INCIDENT_DEFAULT_DESCRIPTION",
             ["alert", "incident_static_description"],
             config,
             required=True,
         )
         self.connector_initial_pull_off = pycti.get_config_variable(
-            "CONNECTOR_INITIAL_PULL_OFF",
+            "RECORDED_FUTURE_ALERT_CONNECTOR_INITIAL_PULL_OFF",
             ["alert", "initial_pull_off"],
             config,
             required=False,
             default=1,
         )
         self.connector_download_path = pycti.get_config_variable(
-            "ALERT_CONNECTOR_DOWNLOAD_PATH",
+            "RECORDED_FUTURE_ALERT_CONNECTOR_DOWNLOAD_PATH",
             ["alert", "download_path"],
             config,
             required=True
         )
         self.recordedfuture_logo_abuse_rule_id = pycti.get_config_variable(
-            "ALERT_LOGO_ABUSE_RULE_ID",
+            "RECORDED_FUTURE_ALERT_LOGO_ABUSE_RULE_ID",
             ["alert", "logo_abuse_rule_id"],
             config,
             required=True,
